@@ -1,15 +1,10 @@
 # GH actions.
 # We use it to cover windows builds
 # Jenkins is still the primary CI
-name: Windows CI
+name: Windows CI (Legacy)
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:  # Manual trigger only to avoid conflicts with main CI/CD pipeline
 
 jobs:
   Windows:
